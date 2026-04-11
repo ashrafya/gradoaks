@@ -66,6 +66,30 @@ export const products: Product[] = [
   },
   {
     id: '3',
+    slug: 'grad-quarter-zip',
+    name: 'Grad Quarter Zip',
+    tagline: 'Sharp. Warm. Unmistakably yours.',
+    description:
+      'A refined alternative to the full hoodie. Custom-embroidered school crest at the chest, grad year on the sleeve. Midweight fleece with a clean stand collar — the piece that works from the bleachers to wherever the night takes you.',
+    price: 85,
+    category: 'Hoodies',
+    featured: true,
+    details: [
+      '350gsm midweight fleece',
+      'Custom embroidery — chest crest & sleeve year',
+      'YKK quarter-zip pull',
+      'Stand collar, ribbed cuffs & hem',
+      'Made in Canada',
+    ],
+    image: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80',
+      'https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=800&q=80',
+      'https://images.unsplash.com/photo-1565084888279-aca607ecce0c?w=800&q=80',
+    ],
+  },
+  {
+    id: '3b',
     slug: 'class-jersey',
     name: 'Class Jersey',
     tagline: 'Rep your class. Own the hallway.',

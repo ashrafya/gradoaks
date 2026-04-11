@@ -78,7 +78,7 @@ export default function RepPage() {
 
           <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
             <Image
-              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=85"
+              src="/images/students-outside-school.png"
               alt="GradOaks student reps"
               fill
               priority

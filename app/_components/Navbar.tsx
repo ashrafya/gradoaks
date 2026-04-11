@@ -1,13 +1,14 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 
 const links = [
-  { label: 'Shop', href: '/shop' },
   { label: 'How It Works', href: '/how-it-works' },
+  { label: 'FAQ', href: '/faq' },
   { label: 'Become a Rep', href: '/rep', highlight: true },
 ]
 
@@ -21,18 +22,41 @@ export default function Navbar() {
       className="sticky top-0 z-50 bg-[var(--color-bg)] backdrop-blur-sm"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <Link
-            href="/"
-            className="font-[family-name:var(--font-display)] text-sm font-bold uppercase tracking-widest text-[var(--color-fg)] transition-opacity duration-150 hover:opacity-60"
-          >
-            GradOaks
-          </Link>
+        <div className="relative flex h-16 items-center justify-between md:justify-normal">
+          {/* Left nav (desktop) */}
+          <nav className="hidden w-full items-center gap-8 md:flex" aria-label="Main navigation">
+            {links.slice(0, 2).map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-sm font-medium tracking-wide transition-colors duration-150 ${
+                  pathname.startsWith(link.href)
+                    ? 'text-[var(--color-fg)]'
+                    : 'text-[var(--color-muted-fg)] hover:text-[var(--color-fg)]'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
 
-          {/* Desktop nav */}
-          <nav className="hidden items-center gap-8 md:flex" aria-label="Main navigation">
-            {links.map((link) => (
+          {/* Logo — centered absolutely on desktop, left-aligned on mobile */}
+          <div className="md:absolute md:left-1/2 md:-translate-x-1/2">
+            <Link href="/" className="transition-opacity duration-150 hover:opacity-60">
+              <Image
+                src="/images/gradoaks-logo.png"
+                alt="GradOaks"
+                width={40}
+                height={40}
+                className="h-10 w-auto"
+                priority
+              />
+            </Link>
+          </div>
+
+          {/* Right nav (desktop) */}
+          <nav className="hidden w-full items-center justify-end gap-8 md:flex" aria-label="Main navigation">
+            {links.slice(2).map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -53,7 +77,7 @@ export default function Navbar() {
 
           {/* Mobile menu toggle */}
           <button
-            className="flex items-center text-[var(--color-fg)] md:hidden cursor-pointer"
+            className="ml-auto flex items-center text-[var(--color-fg)] md:hidden cursor-pointer"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((o) => !o)}

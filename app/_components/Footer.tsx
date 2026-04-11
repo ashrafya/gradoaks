@@ -19,18 +19,16 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Shop */}
+          {/* Rep */}
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-muted-fg)]">
-              Shop
+              Rep Program
             </p>
             <ul className="mt-4 space-y-3">
               {[
-                { label: 'All Products', href: '/shop' },
-                { label: 'Hoodies', href: '/shop?category=Hoodies' },
-                { label: 'Crewnecks', href: '/shop?category=Crewnecks' },
-                { label: 'Jerseys', href: '/shop?category=Jerseys' },
-                { label: 'Accessories', href: '/shop?category=Accessories' },
+                { label: 'Become a Rep', href: '/rep' },
+                { label: 'How It Works', href: '/how-it-works' },
+                { label: 'FAQ', href: '/faq' },
               ].map(({ label, href }) => (
                 <li key={label}>
                   <Link

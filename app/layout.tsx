@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${bodoniModa.variable} ${jost.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${bodoniModa.variable} ${jost.variable} ${dmSans.variable}`} suppressHydrationWarning>
       <body>
         <Navbar />
         <main>{children}</main>
