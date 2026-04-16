@@ -158,7 +158,7 @@ export default function HowItWorksPage() {
           <h2 className="font-[family-name:var(--font-display)] text-5xl font-bold leading-none tracking-tight text-[var(--color-fg)] sm:text-6xl lg:text-7xl">
             READY WHEN YOU ARE.
           </h2>
-          <p className="mx-auto mt-6 max-w-md text-sm text-[var(--color-muted-fg)]">
+          <p className="mx-auto mt-6 max-w-md text-base text-[var(--color-muted-fg)]">
             Orders ship directly to your school within 3 weeks. Minimum of 12 pieces per order.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

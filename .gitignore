@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# secrets
+assets/apikey.txt
+
 # debug
 npm-debug.log*
 yarn-debug.log*

@@ -124,164 +124,207 @@ export default function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-accent)]">
               Early Reviews
             </p>
-            <h2 className="mt-2 font-[family-name:var(--font-heading)] text-4xl font-semibold text-[var(--color-fg)]">
+            <h2 className="mt-2 font-[family-name:var(--font-heading)] text-4xl font-semibold text-[var(--color-fg)] sm:text-5xl">
               From the first classes to wear it.
             </h2>
           </div>
 
           {/* Collage — absolutely positioned cards inside a fixed-height canvas */}
-          <div className="relative w-full h-[780px]">
+          <div className="relative w-full h-[820px]">
 
-            {/* Card A — tall photo, far left, starts high */}
+            {/* Col 1 — far left (0–22%) */}
+
+            {/* Card A — tall photo, top */}
             <div
               className="absolute overflow-hidden shadow-xl"
-              style={{ left: '0%', top: '0px', width: '22%', height: '420px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.5)' }}
+              style={{ left: '0%', top: '0px', width: '22%', height: '480px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.5)' }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&q=80"
-                alt="Grad group"
+                src="/images/students-bleachers-track-field.png"
+                alt="Students at bleachers in grad gear"
                 fill
                 className="object-cover"
                 sizes="22vw"
               />
-              {/* glass shine overlay */}
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 60%)', pointerEvents: 'none' }} />
             </div>
 
-            {/* Card B — wide photo, left-center, lower start */}
+            {/* Card A2 — photo, bottom-left filling gap */}
             <div
               className="absolute overflow-hidden shadow-lg"
-              style={{ left: '3%', top: '450px', width: '34%', height: '280px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.5)' }}
+              style={{ left: '0%', top: '496px', width: '22%', height: '324px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.5)' }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80"
-                alt="Graduation ceremony"
+                src="/images/student-backpack-school-entrance.png"
+                alt="Student with backpack at school entrance"
                 fill
                 className="object-cover object-top"
-                sizes="34vw"
+                sizes="22vw"
               />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.10) 0%, transparent 60%)', pointerEvents: 'none' }} />
             </div>
 
-            {/* Card C — frosted glass quote card, accent tint, mid-left */}
+            {/* Col 2 — left-center (24–50%) */}
+
+            {/* Card C — frosted glass quote card, accent tint, top */}
             <div
-              className="absolute flex flex-col justify-between p-7 shadow-2xl"
+              className="absolute overflow-hidden shadow-2xl"
               style={{
-                left: '24%', top: '60px', width: '26%', height: '300px', zIndex: 10,
+                left: '24%', top: '0px', width: '26%', height: '300px', zIndex: 10,
                 borderRadius: '24px',
-                background: 'rgba(62, 140, 181, 0.55)',
-                backdropFilter: 'blur(18px)',
-                WebkitBackdropFilter: 'blur(18px)',
                 border: '1px solid rgba(255,255,255,0.35)',
                 boxShadow: '0 8px 32px rgba(62,140,181,0.25), inset 0 1px 0 rgba(255,255,255,0.3)',
               }}
             >
-              <span
-                className="font-[family-name:var(--font-heading)] text-6xl leading-none text-white/25 select-none"
-                aria-hidden="true"
-              >&ldquo;</span>
-              <div>
-                <p className="text-base italic leading-snug text-white drop-shadow-sm">
-                  Everyone in our grade actually wears theirs. We almost went with someone else — glad we didn&apos;t.
-                </p>
-                <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-white/70">
-                  Alex R. &mdash; Calgary, Class of 2025
-                </p>
+              <Image
+                src="/images/squad-track-field.png"
+                alt=""
+                fill
+                className="object-cover object-center"
+                sizes="26vw"
+              />
+              <div style={{ position: 'absolute', inset: 0, background: 'rgba(62, 140, 181, 0.62)', backdropFilter: 'blur(2px)', WebkitBackdropFilter: 'blur(2px)' }} />
+              <div className="relative flex flex-col justify-between h-full p-7">
+                <span
+                  className="font-[family-name:var(--font-heading)] text-6xl leading-none text-white/25 select-none"
+                  aria-hidden="true"
+                >&ldquo;</span>
+                <div>
+                  <p className="text-base italic leading-snug text-white drop-shadow-sm">
+                    Everyone in our grade actually wears theirs. We almost went with someone else — glad we didn&apos;t.
+                  </p>
+                  <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-white/70">
+                    Alex R. &mdash; Calgary, Class of 2025
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Card D — square photo, center, dips down */}
+            {/* Card D — photo, below C */}
             <div
               className="absolute overflow-hidden shadow-xl"
-              style={{ left: '27%', top: '390px', width: '22%', height: '360px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.5)' }}
+              style={{ left: '24%', top: '316px', width: '26%', height: '504px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.5)' }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=500&q=80"
-                alt="Grad hoodie"
+                src="/images/oakwood-crewneck-flat-lay.png"
+                alt="Oakwood crewneck flat lay"
                 fill
                 className="object-cover"
+                sizes="26vw"
+              />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.10) 0%, transparent 60%)', pointerEvents: 'none' }} />
+            </div>
+
+            {/* Col 3 — center-right (52–74%) */}
+
+            {/* Card E — frosted glass dark quote card, top */}
+            <div
+              className="absolute overflow-hidden shadow-2xl"
+              style={{
+                left: '52%', top: '0px', width: '22%', height: '320px', zIndex: 10,
+                borderRadius: '24px',
+                border: '1px solid rgba(255,255,255,0.15)',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.12)',
+              }}
+            >
+              <Image
+                src="/images/student-hallway-locker.png"
+                alt=""
+                fill
+                className="object-cover object-center"
+                sizes="22vw"
+              />
+              <div style={{ position: 'absolute', inset: 0, background: 'rgba(13, 13, 13, 0.65)', backdropFilter: 'blur(2px)', WebkitBackdropFilter: 'blur(2px)' }} />
+              <div className="relative flex flex-col justify-between h-full p-7">
+                <span
+                  className="font-[family-name:var(--font-heading)] text-6xl leading-none text-white/10 select-none"
+                  aria-hidden="true"
+                >&ldquo;</span>
+                <div>
+                  <p className="text-base italic leading-snug text-white/90 drop-shadow-sm">
+                    Took me maybe 90 minutes to set up the order page. The rest basically ran itself.
+                  </p>
+                  <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-white/40">
+                    Jake T. &mdash; Class Rep, Vancouver
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card F — tall photo, below E */}
+            <div
+              className="absolute overflow-hidden shadow-lg"
+              style={{ left: '52%', top: '336px', width: '22%', height: '484px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.5)' }}
+            >
+              <Image
+                src="/images/student-locker-hallway-riverside.png"
+                alt="Student by lockers in hallway"
+                fill
+                className="object-cover object-top"
                 sizes="22vw"
               />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.10) 0%, transparent 60%)', pointerEvents: 'none' }} />
             </div>
 
-            {/* Card E — frosted glass dark quote card, right-center, high up */}
-            <div
-              className="absolute flex flex-col justify-between p-7 shadow-2xl"
-              style={{
-                left: '52%', top: '0px', width: '24%', height: '320px', zIndex: 10,
-                borderRadius: '24px',
-                background: 'rgba(13, 13, 13, 0.55)',
-                backdropFilter: 'blur(18px)',
-                WebkitBackdropFilter: 'blur(18px)',
-                border: '1px solid rgba(255,255,255,0.15)',
-                boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.12)',
-              }}
-            >
-              <span
-                className="font-[family-name:var(--font-heading)] text-6xl leading-none text-white/10 select-none"
-                aria-hidden="true"
-              >&ldquo;</span>
-              <div>
-                <p className="text-base italic leading-snug text-white/90 drop-shadow-sm">
-                  Took me maybe 90 minutes to set up the order page. The rest basically ran itself.
-                </p>
-                <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-white/40">
-                  Jake T. &mdash; Class Rep, Vancouver
-                </p>
-              </div>
-            </div>
+            {/* Col 4 — far right (76–100%) */}
 
-            {/* Card F — narrow tall photo, right side, offset down */}
+            {/* Card G1 — photo, top */}
             <div
-              className="absolute overflow-hidden shadow-lg"
-              style={{ left: '53%', top: '350px', width: '18%', height: '390px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.5)' }}
+              className="absolute overflow-hidden shadow-xl"
+              style={{ left: '76%', top: '0px', width: '24%', height: '280px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.5)' }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=500&q=80"
-                alt="Student in grad gear"
+                src="/images/chs-quarter-zip-closeup.png"
+                alt="CHS quarter zip closeup"
                 fill
                 className="object-cover object-top"
-                sizes="18vw"
+                sizes="24vw"
               />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.10) 0%, transparent 60%)', pointerEvents: 'none' }} />
             </div>
 
-            {/* Card G — frosted glass warm quote card, far right, mid-height */}
+            {/* Card G — frosted glass warm quote card, below photo */}
             <div
-              className="absolute flex flex-col justify-between p-7 shadow-2xl"
+              className="absolute overflow-hidden shadow-2xl"
               style={{
-                left: '74%', top: '120px', width: '26%', height: '310px', zIndex: 5,
+                left: '76%', top: '296px', width: '24%', height: '260px', zIndex: 5,
                 borderRadius: '24px',
-                background: 'rgba(255, 250, 244, 0.60)',
-                backdropFilter: 'blur(18px)',
-                WebkitBackdropFilter: 'blur(18px)',
                 border: '1px solid rgba(255,255,255,0.6)',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.8)',
               }}
             >
-              <span
-                className="font-[family-name:var(--font-heading)] text-6xl leading-none text-[var(--color-border)] select-none"
-                aria-hidden="true"
-              >&ldquo;</span>
-              <div>
-                <p className="text-base italic leading-snug text-[var(--color-fg)]">
-                  I was skeptical about ordering custom hoodies online but everything came out exactly right. The stitching is really clean.
-                </p>
-                <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-[var(--color-muted-fg)]">
-                  Aisha M. &mdash; Toronto, Class of 2025
-                </p>
+              <Image
+                src="/images/student-backpack-school-entrance.png"
+                alt=""
+                fill
+                className="object-cover object-center"
+                sizes="24vw"
+              />
+              <div style={{ position: 'absolute', inset: 0, background: 'rgba(255, 250, 244, 0.72)', backdropFilter: 'blur(2px)', WebkitBackdropFilter: 'blur(2px)' }} />
+              <div className="relative flex flex-col justify-between h-full p-7">
+                <span
+                  className="font-[family-name:var(--font-heading)] text-6xl leading-none text-[var(--color-border)] select-none"
+                  aria-hidden="true"
+                >&ldquo;</span>
+                <div>
+                  <p className="text-sm italic leading-snug text-[var(--color-fg)]">
+                    I was skeptical about ordering online but everything came out exactly right. The stitching is really clean.
+                  </p>
+                  <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-[var(--color-muted-fg)]">
+                    Aisha M. &mdash; Toronto, Class of 2025
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Card H — small photo, far right, low */}
+            {/* Card H — photo, bottom-right filling gap */}
             <div
               className="absolute overflow-hidden shadow-xl"
-              style={{ left: '76%', top: '460px', width: '24%', height: '260px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.5)' }}
+              style={{ left: '76%', top: '572px', width: '24%', height: '248px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.5)' }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=500&q=80"
-                alt="Crewneck detail"
+                src="/images/class-group-bleachers.png"
+                alt="Class group on bleachers"
                 fill
                 className="object-cover"
                 sizes="24vw"
@@ -299,7 +342,7 @@ export default function HomePage() {
           <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-accent)]">
             The Collection
           </p>
-          <h2 className="mt-2 font-[family-name:var(--font-heading)] text-4xl font-semibold text-[var(--color-fg)] sm:text-5xl">
+          <h2 className="mt-2 font-[family-name:var(--font-heading)] text-5xl font-semibold text-[var(--color-fg)] sm:text-6xl">
             The Opening Lineup
           </h2>
         </div>
@@ -340,10 +383,10 @@ export default function HomePage() {
                 />
               </div>
               <div className="mt-6 text-center">
-                <h3 className="font-[family-name:var(--font-heading)] text-xl font-medium text-[var(--color-fg)]">
+                <h3 className="font-[family-name:var(--font-heading)] text-2xl font-medium text-[var(--color-fg)]">
                   {name}
                 </h3>
-                <p className="mt-1 text-sm text-[var(--color-muted-fg)]">{tagline}</p>
+                <p className="mt-1 text-base text-[var(--color-muted-fg)]">{tagline}</p>
               </div>
             </Link>
           ))}
@@ -369,10 +412,10 @@ export default function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-accent)]">
               The Process
             </p>
-            <h2 className="mt-2 font-[family-name:var(--font-heading)] text-3xl font-semibold text-[var(--color-fg)]">
+            <h2 className="mt-2 font-[family-name:var(--font-heading)] text-4xl font-semibold text-[var(--color-fg)] sm:text-5xl">
               No group chats required.
             </h2>
-            <p className="mx-auto mt-4 max-w-lg text-sm leading-relaxed text-[var(--color-muted-fg)]">
+            <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-[var(--color-muted-fg)]">
               We built the ordering flow so you don&apos;t have to manage it yourself.
               One rep, one link, one order — sorted.
             </p>
@@ -435,8 +478,8 @@ export default function HomePage() {
                   >1</span>
                 </div>
                 <div>
-                  <p className="font-[family-name:var(--font-heading)] text-lg font-semibold text-[var(--color-fg)]">Find Your School</p>
-                  <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted-fg)]">Look up your school to see if a rep is already set up — or claim the spot yourself.</p>
+                  <p className="font-[family-name:var(--font-heading)] text-xl font-semibold text-[var(--color-fg)]">Find Your School</p>
+                  <p className="mt-2 text-base leading-relaxed text-[var(--color-muted-fg)]">Look up your school to see if a rep is already set up — or claim the spot yourself.</p>
                 </div>
               </div>
 
@@ -469,8 +512,8 @@ export default function HomePage() {
                   >2</span>
                 </div>
                 <div>
-                  <p className="font-[family-name:var(--font-heading)] text-lg font-semibold text-[var(--color-fg)]">Lock In the Look</p>
-                  <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted-fg)]">Choose your styles, pick your colours, and submit your class design. We give your rep the tools to make it easy.</p>
+                  <p className="font-[family-name:var(--font-heading)] text-xl font-semibold text-[var(--color-fg)]">Lock In the Look</p>
+                  <p className="mt-2 text-base leading-relaxed text-[var(--color-muted-fg)]">Choose your styles, pick your colours, and submit your class design. We give your rep the tools to make it easy.</p>
                 </div>
               </div>
 
@@ -498,8 +541,8 @@ export default function HomePage() {
                   >3</span>
                 </div>
                 <div>
-                  <p className="font-[family-name:var(--font-heading)] text-lg font-semibold text-[var(--color-fg)]">It Shows Up</p>
-                  <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted-fg)]">Your full order lands at school within 3 weeks, packed and labelled per person. No chasing anyone.</p>
+                  <p className="font-[family-name:var(--font-heading)] text-xl font-semibold text-[var(--color-fg)]">It Shows Up</p>
+                  <p className="mt-2 text-base leading-relaxed text-[var(--color-muted-fg)]">Your full order lands at school within 3 weeks, packed and labelled per person. No chasing anyone.</p>
                 </div>
               </div>
 
