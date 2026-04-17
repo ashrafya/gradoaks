@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { ArrowUpRight, CheckCircle } from 'lucide-react'
-import { submitRepForm } from '../actions'
+import { FORMSPREE_ID } from '../../config'
 
 type Mode = 'buyer' | 'rep'
 
@@ -24,7 +24,11 @@ export default function RepForm() {
     setLoading(true)
     const formData = new FormData(e.currentTarget)
     formData.set('mode', mode)
-    await submitRepForm(formData)
+    await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      method: 'POST',
+      body: formData,
+      headers: { Accept: 'application/json' },
+    })
     setSubmitted(true)
     setLoading(false)
   }
