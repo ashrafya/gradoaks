@@ -1,0 +1,5 @@
+For the school [SCHOOL NAME] in [CITY], Ontario, do the following:
+
+Find up to 10 public, student-run Instagram handles (clubs, sports teams, student council, etc.) — exclude the official school account
+Look up the total school enrollment (use Ontario's School Information Finder or any public source, put nan if not found)
+In ontario_high_schools_outreach.csv, replace the single existing row for this school with one row per Instagram handle found, filling in school_size for each row
